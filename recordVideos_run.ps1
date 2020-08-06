@@ -1,0 +1,1 @@
+.\recordVideos.ps1 rtsp://login:password@155.116.31.1:554/ISAPI/Streaming/Channels/101 Camera1 01:00:00 0:10:00 $true $true 8
