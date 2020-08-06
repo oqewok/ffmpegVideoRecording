@@ -28,7 +28,7 @@ function Invoke-Recording
     Write-Output("")
 
     $yearMonthDay = Get-Date -Format yyyyMMdd
-    $fullTime = Get-Date -Format H-mm-ss-ffff
+    $fullTime = Get-Date -Format HH-mm-ss-ffff
 
     $saveFolder = "$PSScriptRoot\recorded\$cameraName\"
 
