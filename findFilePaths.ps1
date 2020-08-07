@@ -27,7 +27,7 @@ function Find-File {
     $files = Get-ChildItem $Path -Recurse -File -Exclude $ExcludeFolder
     [string[]]$foundFilePaths = @()
 
-    $searchPattern = "*_{0}.*" -f $Alias
+    $searchPattern = "*{0}*.*" -f $Alias
     
     $files | ForEach-Object{
         if($_.Name -like $searchPattern){
