@@ -102,7 +102,10 @@ $TestScriptBlock = {
 
             for ($i = 0; $i -lt 8 -and -not $hasStream; $i++)
             {
-                $command = ".\ffprobe.exe -v quiet -print_format json -select_streams v:0 -show_entries stream=avg_frame_rate,r_frame_rate,time_base,bits_per_raw_sample -of default=noprint_wrappers=1:nokey=1 -rtsp_transport tcp -stimeout 1000 -i `"$CameraURI`""
+
+                $command = ".\ffprobe.exe -v quiet -print_format json -select_streams v:0 -show_entries stream=avg_frame_rate,r_frame_rate,time_base,bits_per_raw_sample -of default=noprint_wrappers=1:nokey=1 -rtsp_transport tcp -i `"$CameraURI`""
+                
+                # $command = ".\ffprobe.exe -v quiet -print_format json -select_streams v:0 -show_entries stream=avg_frame_rate,r_frame_rate,time_base,bits_per_raw_sample -of default=noprint_wrappers=1:nokey=1 -rtsp_transport tcp -stimeout 1000 -i `"$CameraURI`""
                 # $command = ".\ffprobe.exe -v quiet -print_format json -select_streams v:0 -show_entries stream=avg_frame_rate,r_frame_rate,time_base,bits_per_raw_sample -of  default=noprint_wrappers=1:nokey=0 -i D:\Data\20200715_17-19-20-3530_Conv2_Cam123.ts"
                 $ffprobeResult = Invoke-Expression $command
 
