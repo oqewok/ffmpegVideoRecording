@@ -1,7 +1,7 @@
 Param (
-    [Parameter (Mandatory=$true)][string]$cameraURI,
-    [Parameter (Mandatory=$true)][string]$cameraName,
-    [Parameter (Mandatory=$true)][timespan]$recordLength,
+    [Parameter(Mandatory=$true)][string]$cameraURI,
+    [Parameter(Mandatory=$true)][string]$cameraName,
+    [Parameter(Mandatory=$true)][timespan]$recordLength,
     [Parameter(Mandatory=$true)][timespan]$cameraPingInterval,
     [Parameter(Mandatory=$false)][bool]$passThru=$true,
     [Parameter(Mandatory=$false)][bool]$noNewWindow=$true,
